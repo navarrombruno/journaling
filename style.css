@@ -1,0 +1,174 @@
+:root {
+  --dark-bg: #0e1f1b;
+  --dark-primary: #1c3c38;
+  --dark-accent: #d19934;
+  --dark-text: #f1f1e6;
+  --highlight-dark: rgba(255, 255, 255, 0.05);
+
+  --light-bg: #fffdf7;
+  --light-primary: #e6cb91;
+  --light-accent: #123b35;
+  --light-text: #1e1e1e;
+  --highlight-light: rgba(0, 0, 0, 0.05);
+}
+
+/* Tema padrão: escuro */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  transition: all 0.3s ease;
+}
+
+.light-theme {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+header {
+  background-color: var(--dark-primary);
+  padding: 20px;
+  text-align: center;
+}
+
+.light-theme header {
+  background-color: var(--light-primary);
+}
+
+header h1 {
+  margin: 0;
+  color: var(--dark-accent);
+}
+
+.light-theme header h1 {
+  color: var(--light-accent);
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a, nav button {
+  color: var(--dark-accent);
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav a:hover, nav button:hover {
+  text-decoration: underline;
+}
+
+.light-theme nav a, .light-theme nav button {
+  color: var(--light-accent);
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+footer {
+  background-color: var(--dark-primary);
+  text-align: center;
+  padding: 10px;
+  color: var(--dark-accent);
+}
+
+.light-theme footer {
+  background-color: var(--light-primary);
+  color: var(--light-accent);
+}
+
+.intro, .bio, .projects {
+  background-color: var(--highlight-dark);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.light-theme .intro, .light-theme .bio, .light-theme .projects {
+  background-color: var(--highlight-light);
+}
+
+/* Projetos */
+.projetos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.projeto-card {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--dark-primary);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.projeto-card:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  transform: scale(1.01);
+}
+
+.light-theme .projeto-card {
+  background-color: var(--light-primary);
+}
+
+.img-lado img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 300px;
+}
+
+.info-lado {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn {
+  margin-top: 10px;
+  background-color: var(--dark-accent);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  align-self: start;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #b9832b;
+}
+
+.light-theme .btn {
+  background-color: var(--light-accent);
+  color: white;
+}
+
+.light-theme .btn:hover {
+  background-color: #0c2f2b;
+}
+
+@media screen and (max-width: 768px) {
+  .projeto-card {
+    flex-direction: column;
+  }
+
+  .img-lado img {
+    max-width: 100%;
+  }
+}

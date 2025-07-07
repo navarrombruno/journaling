@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diário do Bruno</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Diário do Bruno</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre Mim</a>
+      <a href="projetos.html">Projetos</a>
+      <button id="toggleTheme">🌗 Tema</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Saudações, Jovenzinhos!</h2>
+      <p>Descubra todos os projetos que desenvolvemos ao longo desse ano.</p>
+    </section>
+
+    <section class="projetos">
+      <div class="projeto-card">
+        <div class="img-lado">
+          <img src="https://cdn.prod.website-files.com/63fda77e5fd49598bbf00892/6495dc794c0e6d080b0ce885_8.png" alt="Projeto 1" />
+        </div>
+        <div class="info-lado">
+          <h3>Projeto 1: Animações no Scratch</h3>
+          <p>O Scratch é um site educacional para criação de jogos e animações.
+            Veja aqui alguns exemplos que fizemos no primeiro bimestre.</p>
+          <a href="CRIAR UM ARQUIVO PARA O PROJETO 1" target="_blank" class="btn">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="projeto-card">
+        <div class="img-lado">
+          <img src="https://marlontenorio.wordpress.com/wp-content/uploads/2020/04/elipses_2.png" alt="Projeto 2" />
+        </div>
+        <div class="info-lado">
+          <h3>Projeto 2: Jogos com P5JS</h3>
+          <p>Desenho ditigal e programação? Temos também.
+            Aqui você encontra projetos realizados no site do editor do P5JS.</p>
+          <a href="CRIAR UM ARQUIVO PARA O PROJETO 2" target="_blank" class="btn">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="projeto-card">
+        <div class="img-lado">
+          <img src="https://raw.githubusercontent.com/microsoft/vscode-livepreview/main/img/live-refresh.gif" alt="Projeto 3" />
+        </div>
+        <div class="info-lado">
+          <h3>Projeto 3: Site Interativo com VS Code</h3>
+          <p>Quer que o mundo te descubra?
+            Nesse bimestre aprendemos como criar um site utilizando um software profissional, o VS Code.
+            Veja alguns exemplos e se inspire para fazer o seu.
+          </p>
+          <a href="https://exemplo.com/projeto3" target="_blank" class="btn">Saiba Mais</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Diário do Bruno</p>
+  </footer>
+
+  <script>
+    const toggleTheme = document.getElementById("toggleTheme");
+    toggleTheme.addEventListener("click", () => {
+      document.body.classList.toggle("light-theme");
+    });
+  </script>
+</body>
+</html>
